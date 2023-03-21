@@ -21,7 +21,7 @@ dependencies = []
 version_variable = [
     "src/semantic-release-repro/__init__.py:__version__",
 ]
-commit_parser = "parser_angular.parse_commit_message"
+commit_parser = "parser_custom.parse_commit_message"
 hvcs_domain = "github.com/"
 hvcs_api_domain = "github.com//api/v3"
 custom_parser_default_level_bump = "patch"
