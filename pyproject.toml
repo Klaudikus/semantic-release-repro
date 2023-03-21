@@ -1,0 +1,27 @@
+[build-system]
+requires = [
+    "setuptools >= 67.6",
+    "wheel",
+    "setuptools_scm[toml] >= 7.1"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["version"]
+name = "semantic-release-repro"
+authors = [
+    { name = "name last_name", email = "name.last_name@domain.com"},
+]
+readme = "README.md"
+description = 'template'
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.semantic_release]
+version_variable = [
+    "src/semantic-release-repro/__init__.py:__version__",
+]
+commit_parser = "parser_angular.parse_commit_message"
+hvcs_domain = "github.com/"
+hvcs_api_domain = "github.com//api/v3"
+custom_parser_default_level_bump = "patch"
